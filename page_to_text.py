@@ -15,7 +15,8 @@ if sys.stdout.encoding != 'UTF-8':
                  'page_2013-07-15': 'http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15',
                  'page_2016-07-15': 'http://schema.primaresearch.org/PAGE/gts/pagecontent/2016-07-15',
                  'page_2017-07-15': 'http://schema.primaresearch.org/PAGE/gts/pagecontent/2017-07-15',
-                 'page_2018-07-15': 'http://schema.primaresearch.org/PAGE/gts/pagecontent/2018-07-15'}
+                 'page_2018-07-15': 'http://schema.primaresearch.org/PAGE/gts/pagecontent/2018-07-15',
+                 'page_2019-07-15': 'http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15'}
     tree = ET.parse(sys.argv[1])
     xmlns = tree.getroot().tag.split('}')[0].strip('{')
     if xmlns in namespace.values():
