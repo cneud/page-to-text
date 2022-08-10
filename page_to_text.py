@@ -23,7 +23,8 @@ if sys.stdout.encoding != 'UTF-8':
         for regions in tree.iterfind('.//{%s}TextEquiv' % xmlns):
             sys.stdout.write('\n')
             for region in regions.findall('{%s}Unicode' % xmlns):
-                text = region.text
-                sys.stdout.write(text)
+                if region.text is not None:
+                    text = region.text
+                    sys.stdout.write(text)
     else:
         print('ERROR: Not a valid PAGE xml file (namespace declaration missing)')
